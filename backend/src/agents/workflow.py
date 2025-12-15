@@ -2,8 +2,9 @@ from langgraph.graph import StateGraph, END
 from src.graph.state import AgentState
 
 # Now we import from the package, not the 'nodes' file
-from src.agents import search_node, read_node, write_node
-
+from src.agents.researcher import search_node
+from src.agents.reader import read_node
+from src.agents.writer import write_node
 def create_graph():
     workflow = StateGraph(AgentState)
 
