@@ -1,5 +1,3 @@
-# Self_Correcting_Autonomous_Research_Agent
-
 # 🕵️‍♀️ Sentinel: Autonomous Research Agent
 
 > **A Self-Correcting Multi-Agent System built with LangGraph, FastAPI, and DeepEval.**
