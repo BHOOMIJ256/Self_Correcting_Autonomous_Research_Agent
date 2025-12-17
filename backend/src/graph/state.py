@@ -1,8 +1,13 @@
-# src/graph/state.py
 from typing import TypedDict, List
 
 class AgentState(TypedDict):
-    topic: str                # The input topic (e.g., "AI in Healthcare")
-    search_results: List[str] # Raw results from the Search Agent
-    research_notes: str       # Filtered notes from the Read Agent
-    final_summary: str        # Output from the Write Agent
+    topic: str
+    plan: List[str]
+    search_results: List[str]
+    research_notes: str
+    final_summary: str
+    critique: str
+    loop_count: int
+    # --- NEW FIELDS ---
+    search_mode: str  # "auto", "academic", "web"
+    model_name: str   # "llama-3.3", "gpt-4o"
