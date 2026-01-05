@@ -1,9 +1,9 @@
-# 🕵️‍♀️ Sentinel: Autonomous Research Agent
+# Sentinel: Autonomous Research Agent
 
 > **A Self-Correcting Multi-Agent System built with LangGraph, FastAPI, and DeepEval.**
 > *Deployed with CI/CD pipelines and Observable via LangSmith.*
 
-## 📖 The Problem
+## The Problem
 
 Most AI research tools are linear "Chatbots"—they search once, summarize, and often hallucinate. They lack the ability to **verify their own work**.
 
@@ -16,7 +16,7 @@ Most AI research tools are linear "Chatbots"—they search once, summarize, and 
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 Sentinel runs on a **LangGraph** orchestrator with 5 specialized agents working in a stateful loop.
 
@@ -40,14 +40,14 @@ graph TD
 
 | Agent | Role & Tech |
 | --- | --- |
-| **🧠 Planner** | Decomposes complex topics into specific sub-tasks. (Llama-3.3) |
-| **🕵️ Researcher** | **Smart Router:** Dynamically switches between **Tavily** (Web News) and **ArXiv** (Academic Papers) based on context. |
-| **⚖️ Critic** | **The Gatekeeper.** Reviews gathered notes against the user's request. If data is missing, it **rejects** the draft and generates a targeted search query to fill the gap. |
-| **📝 Writer** | Synthesizes approved notes into a professional executive summary. |
+| **Planner** | Decomposes complex topics into specific sub-tasks. (Llama-3.3) |
+| **Researcher** | **Smart Router:** Dynamically switches between **Tavily** (Web News) and **ArXiv** (Academic Papers) based on context. |
+| **Critic** | **The Gatekeeper.** Reviews gathered notes against the user's request. If data is missing, it **rejects** the draft and generates a targeted search query to fill the gap. |
+| **Writer** | Synthesizes approved notes into a professional executive summary. |
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Orchestration:** LangGraph, LangChain
 * **LLM Engine:** Llama-3.3-70b (via Groq)
@@ -59,7 +59,7 @@ graph TD
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### **1. Prerequisites**
 
@@ -117,7 +117,7 @@ Access the UI at: `http://localhost:8501`
 
 ---
 
-## 🧪 Quality Assurance (CI/CD)
+## Quality Assurance (CI/CD)
 
 This project treats **"AI Logic" as Code**.
 I implemented a **Continuous Evaluation Pipeline** using GitHub Actions. Every Pull Request triggers a suite of tests to prevent regression.
@@ -129,7 +129,7 @@ I implemented a **Continuous Evaluation Pipeline** using GitHub Actions. Every P
 
 ---
 
-## 📊 Observability
+##  Observability
 
 Connected to **LangSmith** for real-time tracing.
 
@@ -137,8 +137,15 @@ Connected to **LangSmith** for real-time tracing.
 * **Visual Debugging:** Full flame graphs of the Agent's thought process.
 
 ---
+## Project Demo
 
-## 🔮 Future Roadmap
+Check out the full workflow of Vidyut Sanchay in action:
+
+[![Watch the Demo](https://img.youtube.com/vi/d6pbQZi6POU/maxresdefault.jpg)](https://youtu.be/d6pbQZi6POU)
+
+> *Click the image above to watch the video.*
+
+## Future Roadmap
 
 * [ ] **Human-in-the-Loop:** Allow users to approve the "Plan" before execution.
 * [ ] **Multi-Modal Support:** Ability to read charts and images from PDFs.
